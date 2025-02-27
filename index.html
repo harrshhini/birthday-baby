@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lightblue;
+            color: white;
+            font-family: 'Times New Roman', serif;
+            text-align: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Ensures content starts from the top */
+            padding: 20px;
+        }
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 22px;
+            width: 90%;
+            max-width: 600px;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .heart {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            clip-path: polygon(50% 15%, 80% 0, 100% 20%, 50% 100%, 0 20%, 20% 0);
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(0vh); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Baby! </h1>
+    <p>
+        Happy birthday. I really wish that I was there with you right now, making sure you feel as special as you are to me. I wanna be the one planning your day, spoiling you, making you feel like the most important person in the world; because you are. But since I can’t be there, at least we’re under the same moon, right? And if not this time, then the next, because I know, without a doubt, that we’re meant for each other.
+
+        I don’t know why, but lately, I feel like I love you even more than before. I mean, I always have, but recently, it’s been so much that I don’t even know what to do with myself. I catch myself thinking about you all the time; about us, about our future, about finally meeting you. And the more I think about it, the more I just know you’re it for me.
+
+        My favorite part of every single day is getting to talk to you. No matter how tired, stressed, or drained I am, hearing your voice, texting you, or even just knowing you’re there makes everything feel okay. I don’t think you realize just how much you mean to me. You’re my safe place, my happiness, my everything.
+
+        I just wanna be with you already. Wanna hold you, wanna kiss you every minute of every day, wanna make up for all the time we’ve spent apart. I wanna give you the kind of love that makes you feel so safe, so wanted, so completely mine that you never have to question a thing.
+
+        I love you, baby. Happy birthday. I hope today is everything you deserve and more, because you deserve the absolute best; always.
+    </p>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 200);
+    </script>
+</body>
+</html>
